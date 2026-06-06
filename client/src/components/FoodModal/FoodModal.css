@@ -1,0 +1,55 @@
+.food-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+  padding: 20px;
+}
+.food-modal {
+  background: var(--bg-card);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: slideInUp 0.3s ease;
+  position: relative;
+}
+.food-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.food-modal-close:hover { background: rgba(0,0,0,0.65); }
+.food-modal-img-wrap { width: 100%; height: 240px; overflow: hidden; }
+.food-modal-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.food-modal-body { padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 10px; }
+.food-modal-top { display: flex; justify-content: space-between; align-items: center; }
+.food-modal-top h2 { font-size: 22px; font-weight: 600; color: var(--text); }
+.food-modal-rating { width: 70px; }
+.food-modal-category { display: inline-block; background: var(--bg-soft); color: var(--text-muted); font-size: 12px; padding: 3px 10px; border-radius: 50px; width: fit-content; }
+.food-modal-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.food-modal-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.food-modal-price { font-size: 26px; font-weight: 700; color: tomato; }
+.food-modal-add { background: tomato; color: white; border: none; padding: 12px 28px; border-radius: 50px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.food-modal-add:hover { background: #e53e1e; }
+.food-modal-counter { display: flex; align-items: center; gap: 16px; background: var(--bg-soft); border: 2px solid tomato; border-radius: 50px; padding: 8px 20px; }
+.food-modal-counter button { background: none; border: none; font-size: 20px; color: tomato; font-weight: bold; cursor: pointer; line-height: 1; }
+.food-modal-counter span { font-size: 18px; font-weight: 700; color: var(--text); min-width: 20px; text-align: center; }

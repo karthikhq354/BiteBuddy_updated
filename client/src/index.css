@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --bg:          #ffffff;
+  --bg-soft:     #f9f9f9;
+  --bg-card:     #ffffff;
+  --text:        #262626;
+  --text-muted:  #676767;
+  --border:      #e2e2e2;
+  --accent:      tomato;
+  --accent-soft: #fff4f2;
+  --shadow:      0 2px 12px rgba(0,0,0,0.08);
+  --navbar-bg:   #ffffff;
+  --input-bg:    #ffffff;
+}
+
+body.dark {
+  --bg:          #121212;
+  --bg-soft:     #1e1e1e;
+  --bg-card:     #1e1e1e;
+  --text:        #f0f0f0;
+  --text-muted:  #aaaaaa;
+  --border:      #2e2e2e;
+  --accent:      tomato;
+  --accent-soft: #2a1010;
+  --shadow:      0 2px 12px rgba(0,0,0,0.4);
+  --navbar-bg:   #1a1a1a;
+  --input-bg:    #2a2a2a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+
+  overflow-x: hidden; /* ✅ ADD THIS */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--border) 25%, var(--bg-soft) 50%, var(--border) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

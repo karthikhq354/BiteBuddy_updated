@@ -1,0 +1,109 @@
+.profile-page { padding: 40px 0; max-width: 780px; }
+.profile-title { font-size: 26px; font-weight: 700; color: var(--text); margin-bottom: 32px; }
+
+.profile-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.profile-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile-section-header h3 { font-size: 18px; font-weight: 600; color: var(--text); }
+
+.profile-add-btn {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.profile-add-btn:hover { background: #e53e1e; }
+.profile-empty { color: var(--text-muted); font-size: 14px; }
+
+.addr-form {
+  background: var(--bg-soft);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.addr-form input, .addr-form select {
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.addr-form input:focus, .addr-form select:focus { border-color: tomato; }
+.addr-form-row { display: flex; gap: 12px; }
+.addr-form-row input { flex: 1; }
+
+.addr-save-btn {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s;
+}
+
+.addr-save-btn:hover { background: #e53e1e; }
+
+.addr-list { display: flex; flex-direction: column; gap: 14px; }
+
+.addr-card {
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition: border-color 0.2s;
+  animation: fadeIn 0.3s ease;
+}
+
+.addr-card.default { border-color: tomato; background: var(--accent-soft); }
+
+.addr-card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.addr-label { background: var(--bg-soft); color: var(--text-muted); font-size: 12px; padding: 3px 10px; border-radius: 50px; font-weight: 600; }
+.addr-default-badge { color: tomato; font-size: 12px; font-weight: 700; }
+.addr-name { font-weight: 600; color: var(--text); font-size: 15px; margin-bottom: 4px; }
+.addr-detail { font-size: 13px; color: var(--text-muted); margin-bottom: 2px; }
+
+.addr-actions { display: flex; gap: 10px; margin-top: 12px; }
+
+.addr-btn {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 7px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.addr-btn:hover { background: var(--bg-card); border-color: tomato; color: tomato; }
+.addr-btn.delete:hover { background: #fff0f0; border-color: tomato; color: tomato; }

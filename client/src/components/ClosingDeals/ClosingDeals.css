@@ -1,0 +1,17 @@
+.closing-deals{margin:40px 0}
+.closing-deals-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.closing-deals-header h2{font-size:22px;font-weight:800;color:var(--text,#333)}
+.closing-badge{background:tomato;color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:1px}
+.closing-deals-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px}
+.closing-card{background:var(--bg-card,#fff);border:2px solid tomato;border-radius:16px;overflow:hidden;position:relative;transition:transform 0.2s}
+.closing-card:hover{transform:translateY(-4px)}
+.closing-discount-tag{position:absolute;top:10px;right:10px;background:tomato;color:white;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700;z-index:1}
+.closing-card img{width:100%;height:110px;object-fit:cover}
+.closing-card-body{padding:12px}
+.closing-card-body h3{font-size:14px;font-weight:700;margin-bottom:4px;color:var(--text,#333)}
+.closing-timer{font-size:11px;color:tomato;font-weight:600;margin-bottom:8px}
+.closing-prices{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.closing-new{font-weight:800;color:tomato;font-size:16px}
+.closing-old{text-decoration:line-through;color:var(--text-muted,#999);font-size:13px}
+.closing-card-body button{width:100%;background:tomato;color:white;border:none;border-radius:8px;padding:8px;font-weight:700;cursor:pointer;font-size:13px;transition:background 0.2s}
+.closing-card-body button:hover{background:#e53e1e}

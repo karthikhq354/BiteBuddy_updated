@@ -1,0 +1,151 @@
+.mood-selector {
+  margin: 48px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+/* ── HEADER ─────────────────────────────── */
+.mood-selector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.mood-selector-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.mood-selector-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.mood-clear {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.mood-clear:hover { border-color: tomato; color: tomato; }
+
+/* ── MOOD BUTTONS ───────────────────────── */
+.mood-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.mood-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  background: var(--bg-soft);
+  cursor: pointer;
+  transition: all 0.25s;
+  font-family: inherit;
+  min-width: 110px;
+  flex: 1;
+}
+
+.mood-pill:hover {
+  border-color: tomato;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.mood-pill.active {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.mood-pill-emoji { font-size: 32px; line-height: 1; }
+.mood-pill-label { font-size: 14px; font-weight: 700; color: var(--text); }
+.mood-pill.active .mood-pill-label { color: inherit; }
+.mood-pill-desc  { font-size: 11px; color: var(--text-muted); text-align: center; }
+
+/* ── LOADING ────────────────────────────── */
+.mood-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.mood-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border);
+  border-top: 3px solid tomato;
+  border-radius: 50%;
+  animation: moodSpin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes moodSpin { to { transform: rotate(360deg); } }
+
+/* ── RESULTS ────────────────────────────── */
+.mood-results {
+  margin-top: 24px;
+  animation: fadeIn 0.4s ease;
+}
+
+.mood-results-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  background: var(--bg-soft);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.mood-results-label span { font-size: 24px; }
+.mood-results-label p    { font-size: 14px; color: var(--text-muted); margin: 0; }
+.mood-results-label strong { color: var(--text); }
+
+.mood-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* ── EMPTY ──────────────────────────────── */
+.mood-empty {
+  text-align: center;
+  padding: 32px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 768px) {
+  .mood-selector  { padding: 20px; }
+  .mood-buttons   { gap: 8px; }
+  .mood-pill      { min-width: 80px; padding: 12px 10px; }
+  .mood-pill-emoji{ font-size: 24px; }
+  .mood-pill-desc { display: none; }
+  .mood-results-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}

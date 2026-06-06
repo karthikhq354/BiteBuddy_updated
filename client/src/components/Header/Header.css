@@ -1,0 +1,137 @@
+.header {
+  height: 34vw;
+  min-height: 280px;
+  max-height: 520px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 2%;
+}
+
+/* Each slide bg image — all stacked, only active one visible */
+.header-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  transform: scale(1.03);
+}
+
+.header-bg-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.6s ease, transform 2s ease;
+}
+
+/* Dark gradient overlay so text is readable over any image */
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.45) 55%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2vw;
+  max-width: 55%;
+  bottom: 12%;
+  left: 6vw;
+  z-index: 2;
+}
+
+.header-contents.fade-in {
+  animation: slideInUp 0.5s ease forwards;
+}
+
+.header-contents.fade-out {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.header-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(6px);
+}
+
+.header-contents h2 {
+  font-weight: 800;
+  color: white;
+  font-size: max(3.2vw, 22px);
+  line-height: 1.15;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.header-contents p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: max(1vw, 13px);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+.header-cta {
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: max(0.8vw, 11px) max(2vw, 26px);
+  font-size: max(1vw, 14px);
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: transform 0.2s, opacity 0.2s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.3px;
+}
+
+.header-cta:hover {
+  transform: translateY(-2px) scale(1.03);
+  opacity: 0.92;
+}
+
+.header-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  padding: 0;
+}
+
+.dot-btn.active {
+  width: 28px;
+  border-radius: 5px;
+}
+
+@media (max-width: 750px) {
+  .header { height: 52vw; border-radius: 12px; }
+  .header-contents { max-width: 75%; gap: 2vw; }
+  .header-contents p { display: none; }
+  .header-cta { padding: 10px 20px; }
+}

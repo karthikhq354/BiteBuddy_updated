@@ -1,0 +1,260 @@
+.testimonials {
+  padding: 64px 0 80px;
+  overflow: hidden;
+}
+
+/* ── HEADER ─────────────────────────────── */
+.testi-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.testi-label {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: tomato;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+  border: 1px solid #ffd5cc;
+}
+
+.testi-header h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.testi-header p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* ── CAROUSEL ───────────────────────────── */
+.testi-carousel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+/* ── ARROW BUTTONS ──────────────────────── */
+.testi-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.testi-arrow:hover {
+  border-color: tomato;
+  color: tomato;
+  background: var(--accent-soft);
+}
+
+/* ── CARDS WRAPPER ──────────────────────── */
+.testi-cards {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 16px;
+  flex: 1;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.testi-cards.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.testi-cards.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── CARD ───────────────────────────────── */
+.testi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s;
+}
+
+.testi-card.side {
+  opacity: 0.65;
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+.testi-card.side:hover {
+  opacity: 0.85;
+  transform: scale(0.97);
+}
+
+.testi-card.center {
+  border-color: tomato;
+  box-shadow: 0 8px 32px rgba(255,99,71,0.15);
+  transform: scale(1.02);
+  background: linear-gradient(135deg, #fff8f7, #fff4f2);
+}
+
+body.dark .testi-card.center {
+  background: linear-gradient(135deg, #2a1010, #1f0a0a);
+}
+
+/* ── STARS ──────────────────────────────── */
+.testi-stars { display: flex; gap: 3px; }
+
+.star {
+  font-size: 18px;
+  color: var(--border);
+  transition: color 0.2s;
+}
+
+.star.filled { color: #f59e0b; }
+
+/* ── TEXT ───────────────────────────────── */
+.testi-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+  font-style: italic;
+}
+
+.testi-card.center .testi-text {
+  color: var(--text);
+  font-size: 15px;
+}
+
+/* ── AUTHOR ─────────────────────────────── */
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testi-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.testi-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.testi-location {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── DOTS ───────────────────────────────── */
+.testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.testi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.testi-dot.active {
+  background: tomato;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ── STATS BAR ──────────────────────────── */
+.testi-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 40px;
+}
+
+.testi-stat {
+  text-align: center;
+  flex: 1;
+}
+
+.testi-stat h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: tomato;
+  margin-bottom: 6px;
+}
+
+.testi-stat p {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.testi-stat-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ─────────────────────────── */
+@media (max-width: 900px) {
+  .testi-cards {
+    grid-template-columns: 1fr;
+  }
+  .testi-card.side { display: none; }
+  .testi-card.center { transform: none; }
+  .testi-stats { padding: 20px; gap: 0; }
+  .testi-stat h3 { font-size: 22px; }
+}
+
+@media (max-width: 600px) {
+  .testi-stats {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 20px;
+  }
+  .testi-stat-divider { display: none; }
+  .testi-arrow { width: 36px; height: 36px; font-size: 18px; }
+}

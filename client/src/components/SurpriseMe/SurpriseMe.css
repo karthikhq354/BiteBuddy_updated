@@ -1,0 +1,11 @@
+.surprise-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;padding:20px 0}
+.surprise-btn{background:linear-gradient(135deg,tomato,#ff8c00);color:white;border:none;padding:16px 40px;border-radius:50px;font-size:17px;font-weight:800;cursor:pointer;box-shadow:0 6px 24px rgba(255,99,71,0.35);transition:transform 0.2s}
+.surprise-btn:hover{transform:scale(1.05)}
+.surprise-result{display:flex;gap:20px;background:var(--bg-card,#fff);border:1px solid var(--border,#eee);border-radius:20px;padding:20px;max-width:520px;width:100%;align-items:center}
+.surprise-result img{width:120px;height:100px;border-radius:14px;object-fit:cover;flex-shrink:0}
+.surprise-tag{font-size:11px;font-weight:700;background:#fff4f2;color:tomato;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:1px}
+.surprise-info h3{font-size:17px;font-weight:800;margin:8px 0 4px;color:var(--text,#333)}
+.surprise-info p{font-size:13px;color:var(--text-muted,#666);line-height:1.5;margin-bottom:12px}
+.surprise-footer{display:flex;align-items:center;justify-content:space-between}
+.surprise-footer span{font-size:18px;font-weight:800;color:tomato}
+.surprise-footer button{background:tomato;color:white;border:none;padding:8px 18px;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px}

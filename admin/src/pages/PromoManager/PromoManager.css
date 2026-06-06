@@ -1,0 +1,28 @@
+.promo-page{padding:24px;max-width:1000px}
+.promo-page h1{font-size:24px;font-weight:800;color:#1f2937;margin-bottom:24px}
+.promo-form-card,.promo-list-card{background:white;border-radius:16px;padding:28px;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-bottom:24px}
+.promo-form-card h2,.promo-list-card h2{font-size:17px;font-weight:700;color:#1f2937;margin-bottom:20px}
+.promo-form{display:flex;flex-direction:column;gap:16px}
+.promo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.promo-field{display:flex;flex-direction:column;gap:6px}
+.promo-field label{font-size:13px;font-weight:600;color:#374151}
+.promo-field input,.promo-field select{padding:10px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;outline:none;color:#1f2937}
+.promo-field input:focus,.promo-field select:focus{border-color:tomato}
+.promo-actions{display:flex;gap:12px}
+.promo-btn-save{background:tomato;color:white;border:none;padding:11px 28px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer}
+.promo-btn-save:hover{background:#e53e1e}
+.promo-btn-cancel{background:none;border:1.5px solid #e5e7eb;padding:11px 24px;border-radius:8px;font-size:14px;cursor:pointer;color:#6b7280}
+.promo-table-wrap{overflow-x:auto}
+.promo-table{width:100%;border-collapse:collapse;font-size:14px}
+.promo-table th{padding:12px 14px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;color:#6b7280;background:#f9fafb}
+.promo-table td{padding:12px 14px;border-bottom:1px solid #f3f4f6;color:#374151}
+.promo-code-tag{background:#fff7ed;color:#c2410c;font-family:monospace;font-weight:700;padding:3px 10px;border-radius:6px;font-size:13px;letter-spacing:1px}
+.promo-expired-date{color:#ef4444}
+.promo-status{padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600}
+.promo-status.active{background:#dcfce7;color:#166534}
+.promo-status.inactive{background:#fee2e2;color:#991b1b}
+.promo-actions-cell{display:flex;gap:8px}
+.promo-edit-btn,.promo-del-btn{border:none;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:14px}
+.promo-edit-btn{background:#eff6ff}.promo-del-btn{background:#fef2f2}
+.promo-empty{text-align:center;padding:40px;color:#9ca3af}
+@media(max-width:700px){.promo-row{grid-template-columns:1fr}}
